@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjektivhistorie</title>
+    <style>
+        .bubble{
+            border: solid 1px black;
+            border-radius: 40px;
+            width: 90px;
+            height: 50px;
+            margin: 5px;
+            text-align: center;
+            background-color: aqua;
+            font-size: x-large;
+            padding: 10px;
+            line-height: 45px;
+        }
+
+    </style>
+</head>
+<div id=""> </div>
+<body onload="updateView()">
+    <div id="app"></div>
+    <script>
+        //model            
+        
+        let adjective1 = "___";
+        let adjective2 = "___";
+        let adjective3 = "___";
+        
+        
+        
+        
+        //view
+        function updateView(){
+
+        document.getElementById('app').innerHTML = /*html*/ `    
+            <h1>Lag en Adjektivhistorie</h1>
+            
+            <div>Det var en ${adjective1} mann som hadde et ${adjective2} hus og en 
+                ${adjective3} katt 
+                </div> <br>
+            
+            <div class="bubble" onclick="textInsert(blue)" id="blue">blå</div>
+            <div class="bubble">stort</div>
+            <div class="bubble">skummel</div>
+            `
+        }
+       
+        //controller 
+
+        function textInsert(id){
+            adjective1 = document.getElementById(id).innerHTML 
+        
+        }
+
+
+
+        </script>
+</body>
+</html>
