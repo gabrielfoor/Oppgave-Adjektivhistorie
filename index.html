@@ -29,8 +29,8 @@
         let adjective1 = "___";
         let adjective2 = "___";
         let adjective3 = "___";
-        
-        
+        let adjectiveList = ["___","___","___","___","___",]
+        let adjectiveCounter = 0
         
         
         //view
@@ -39,20 +39,31 @@
         document.getElementById('app').innerHTML = /*html*/ `    
             <h1>Lag en Adjektivhistorie</h1>
             
-            <div>Det var en ${adjective1} mann som hadde et ${adjective2} hus og en 
-                ${adjective3} katt 
+            <div>En ${adjectiveList[0]} morgen våknet Sarah i sitt
+                ${adjectiveList[1]} rom. Hun følte seg
+                ${adjectiveList[2]} og bestemte seg for å gå på en
+                ${adjectiveList[3]} tur gjennom den
+                ${adjectiveList[4]} skogen.
                 </div> <br>
             
-            <div class="bubble" onclick="textInsert(blue)" id="blue">blå</div>
-            <div class="bubble">stort</div>
-            <div class="bubble">skummel</div>
+            <div class="bubble" onclick="textInsert('sunny')" id="sunny">solrik</div>
+            <div class="bubble" onclick="textInsert('cozy')"id="cozy">koselige</div>
+            <div class="bubble" onclick="textInsert('energetic')"id="energetic">energisk</div>
+            <div class="bubble" onclick="textInsert('exciting')"id="exciting">spennende</div>
+            <div class="bubble" onclick="textInsert('mystic')"id="mystic">mystisk</div>
+
             `
         }
        
         //controller 
 
         function textInsert(id){
-            adjective1 = document.getElementById(id).innerHTML 
+            adjectiveList[adjectiveCounter] = (document.getElementById(id).innerHTML);
+            
+            adjectiveCounter++
+
+
+            updateView()
         
         }
 
