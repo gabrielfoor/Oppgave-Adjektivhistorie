@@ -52,6 +52,8 @@
             <div class="bubble" onclick="textInsert('exciting')"id="exciting">spennende</div>
             <div class="bubble" onclick="textInsert('mystic')"id="mystic">mystisk</div>
 
+            <br>   
+            <button onclick="resetView()">Reset</button>
             `
         }
        
@@ -65,6 +67,11 @@
 
             updateView()
         
+        }
+        function resetView(){
+            adjectiveList = ["___","___","___","___","___",]
+            adjectiveCounter = 0
+            updateView()
         }
 
 
